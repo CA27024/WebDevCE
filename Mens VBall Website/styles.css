@@ -4,8 +4,13 @@ body {
 }
 header {
     color: white;
+    
 } 
 
 nav {
     color: white;
+}
+
+footer {
+    color: white; 
 }
