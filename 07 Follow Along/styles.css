@@ -28,6 +28,7 @@ header p {
     nav ul {
         margin: 0;
         padding: 0;
+        flex-direction: column;
     }
 
     nav a {
@@ -62,6 +63,7 @@ nav ul {
     padding: 0 2vw;
     list-style-type: none;
     display: flex;
+
 }
 nav a {
     display: block;
