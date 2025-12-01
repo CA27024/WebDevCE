@@ -1,3 +1,5 @@
+* {box-sizing: border-box;}
+
 body {
     font-family: 'Pompiere', sans-serif;
     margin: 0;
@@ -24,6 +26,69 @@ header span {
     font-size: 1.6rem;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 800px) {
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: .8rem;
+        color: #8C501B;
+        text-decoration: none;
+        border-bottom: solid 1px #eee;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    nav .active a {
+        background-color: #8C501B;
+        color: white;
+        background-image: linear-gradient(to bottom, #8b5022, #663b19 );
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 801px) {
+
+    nav {
+    border-top: solid 1px #E0E6E6;
+    
+}
+nav ul {
+    margin: 0;
+    padding: 0 2vw;
+    list-style-type: none;
+    display: flex;
+}
+nav a {
+    display: block;
+    padding: 1.2rem 1rem .3rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #8C501B;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: solid 2px #fff;
+}
+
+nav .active a {
+    border-bottom: solid 2px #8b5022;
+}
+nav a:hover {
+    color: #000;
+}
+
+}
+
+
 
 nav {
     background-color: #036280;
@@ -64,6 +129,9 @@ main {
     border-radius: 10px;
     margin: 1.25rem 10px;
     background-color: white;
+}
+main div {
+    text-align: center;
 }
 
 main h1 {
