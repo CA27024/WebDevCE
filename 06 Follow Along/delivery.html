@@ -11,9 +11,6 @@
     
     <meta charset="UTF-8">
     <title>Drone Delivery Services LLC.</title>
-
-
-    <meta http-equiv="refresh" content="5; URL=index.html">
 </head>
 <body>
     <!-- start the page header -->
@@ -32,51 +29,47 @@
     
     <!-- start the page main -->
     <main>
-        <h1>Request A Delivery</h1>
-       <form method="get" class="myForm" action="Thanks.html">
-        <fieldset>
-        <legend>Customer Information</legend>
-        <label>First Name*<input type="text" name="fname" required>
-        </label>
-        <label>Last Name*<input type="text" name="lname" required>
-        </label>
-        <label>Cell Number*<input type="tel" name="phone" required placeholder="987-555-1234">
-        </label>
-        </fieldset>    
-        
-        
-        <fieldset>
-        <legend>Delivery Method</legend>
-        <label> <input type="radio" name="Method" value="drone">Drone Delivery (2hrs)</label>
-        <label> <input type="radio" name="Method" value="cycle">Motorcycle (4hrs)</label>
-        <label> <input type="radio" name="Method" value="robot">Robot Delivery (6hrs)</label>
-        </fieldset>
+        <h1>Request a Delivery</h1>
+        <form method="get" class="myForm" action="thanks.html">
 
-        <fieldset>
-            <legend>Delivery Options</legend>
-            <label> <input type="checkbox" name="porch" value="chosen">Front Porch</label>
-            <label> <input type="checkbox" name="deck" value="chosen">Back Deck</label>
-            <label> <input type="checkbox" name="Driveway" value="chosen">Driveway</label>
-            <label> <input type="checkbox" name="garage" value="chosen">inside Garage</label>
-            <label> prefered delivery time s
-                <select name="time">
-                <option value="none">please select</option>
-                <option value="morning">between 7:00 and 11:00 Am</option>
-                <option value="noon">between 11:00AM and 2:00PM</option>
-                <option value="afternoon">between 2:00PM and 5:00PM</option>
-                <option value="evening">between 5:00PM and 8:00PM</option>
+            <fieldset>
+            <legend>Customer Information</legend>
+            <label>First Name*<input type="text" name="fname" required></label>
+            <label>Last Name*<input type="text" name="lname" required></label>
+            <label>Cell Number*<input type="tel" name="phone" required placeholder="123-456-7890"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery Method</legend>
+                <label><input type="radio" name="method" id="drone">Drone (2hrs)</label>
+                <label><input type="radio" name="method" id="cycle">Cycle (4hrs)</label>
+                <label><input type="radio" name="method" id="robot">Robot (6hrs)</label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Delivery Options</legend>
+                <label><input type="checkbox" name="porch" id="chosen">Front Porch</label>
+                <label><input type="checkbox" name="deck" id="chosen">Deck</label>
+                <label><input type="checkbox" name="garage" id="chosen">Inside Garage</label>
+                
+                <label>
+                <select name="time" id="">
+                    <option value="none">Please Select</option>
+                    <option value="morning">7:00am-11:00am</option>
+                    <option value="noon">11:00am-2:00pm</option>
+                    <option value="afternoon">2:00am-5:00am</option>
+                    <option value="evening">5:00pm-8:00pm</option>
                 </select>
+                </label>
+            </fieldset>
+
+            <label> Comments
+                <textarea name="comments" placeholder="Please add any special instructions"></textarea>
             </label>
-            <label> comments
-                <textarea name="comments">Please add any special instructions</textarea>
-            </label>
 
 
-        </fieldset>
-
-
-        <input type="submit" value="Send Delivery Request">
-       </form>
+            <input type="submit" value="Send Delivery Request">
+        </form>
     </main>
     
     <!-- start the page footer -->

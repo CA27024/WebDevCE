@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Pompiere', sans-serif;
     margin: 0;
@@ -12,6 +16,9 @@ body {
 
 header {
     background-color: #012e40;
+    background-image: url(images/shoji.png) ;
+    background-size: 100% 100%;
+    
     padding: 1rem 10px;
     color: white;
     text-align: center;
@@ -58,12 +65,45 @@ nav li a:hover {
     color: #ff6600;
 }
 
+nav ul {
+    margin: 0;
+    padding: 0 2vw;
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 1.2rem 1rem .3rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #223b3f;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: solid 2px #fff;
+}
+
+nav .active a {
+    border-bottom: solid 2px #8b5022;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+
+
 main {
     padding: 1.25rem 10px;
     border: 3px solid #036280;
     border-radius: 10px;
     margin: 1.25rem 10px;
     background-color: white;
+}
+
+main div {
+    text-align: center;
 }
 
 main h1 {
@@ -124,17 +164,17 @@ main a:hover {
 }
 
 
-figure{
+figure {
     float: right;
-    
+
 }
 
-figure img{
+figure img {
 
     width: 20vw;
 }
 
-div.gallery{
+div.gallery {
 
     display: flex;
     flex-wrap: wrap;
@@ -143,15 +183,15 @@ div.gallery{
     gap: 20px 10px;
 }
 
-div.gallery figure img{
+div.gallery figure img {
 
     width: 300px;
-    height:200px;
+    height: 200px;
     margin: 0;
-    
+
 }
 
-div.gallery figcaption{
+div.gallery figcaption {
 
     text-align: center;
     font-size: 1.3rem;
@@ -171,5 +211,77 @@ footer {
 footer p {
     margin: 0;
     letter-spacing: 3px;
+}
+
+@media only screen and (max-width: 800px) {
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        padding: .8rem;
+        color: #232d50;
+        text-decoration: none;
+        border-bottom: solid 1px #0d1261;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    nav .active a {
+        background-color: #232d50;
+        color: #232d50;
+        background-image: linear-gradient(to bottom, #232d50, #323497);
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 801px) {
+
+    nav {
+        border-top: solid 1px #E0E6E6;
+
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0 2vw;
+        list-style-type: none;
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 1.2rem 1rem .3rem 1rem;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #423392;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        border-bottom: solid 2px #402377;
+    }
+
+    nav .active a {
+        border-bottom: solid 2px #32228b;
+    }
+
+    nav a:hover {
+        color: #000;
+    }
+
+
+
+}
+
+.gallery img:hover{
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 2);
 }
 
