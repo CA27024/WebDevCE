@@ -285,3 +285,28 @@ footer p {
 box-shadow: 0px 0px 10px rgba(0, 0, 0, 2);
 }
 
+table.activities {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+table.activities th{
+    background-color: #3179AF;
+    color: white;
+    padding: .6rem 2%;
+    text-align: left;
+}
+
+table.activities td{
+    color: #54691f;
+    padding: .4rem 2%;
+}
+
+table.activities tr:nth-child(odd){
+    background-color: #eee;
+}
+
+table.activities tr:hover {
+    background-color: #ddd;
+}
