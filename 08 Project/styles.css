@@ -292,21 +292,21 @@ table.activities {
 }
 
 table.activities th{
-    background-color: #3179AF;
-    color: white;
+    background-color: #31cf1c;
+    color: rgb(189, 15, 15);
     padding: .6rem 2%;
     text-align: left;
 }
 
 table.activities td{
-    color: #54691f;
+    color: #1296b8;
     padding: .4rem 2%;
 }
 
 table.activities tr:nth-child(odd){
-    background-color: #eee;
+    background-color: #972727;
 }
 
 table.activities tr:hover {
-    background-color: #ddd;
+    background-color: #ddad0e;
 }
