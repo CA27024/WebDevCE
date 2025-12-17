@@ -1,0 +1,143 @@
+p {
+  max-width: 600px; /* Adjust this value as needed (px, em, or ch units work well) */
+}
+
+/* ---------- Reset & Base Styles ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    line-height: 1.6;
+    color: #2f3e46;
+    background-color: #f7f9fb;
+}
+
+/* ---------- Header & Navigation ---------- */
+header {
+    background: #1f3d3a;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav .active a {
+    color: #a8dadc;
+}
+
+/* ---------- Main Content ---------- */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #1f3d3a;
+}
+
+/* ---------- Gallery Layout ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+/* ---------- Figure Cards ---------- */
+figure {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+figure img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+figcaption {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem;
+    background: #e9f5f5;
+    color: #1f3d3a;
+}
+
+/* ---------- Details Section ---------- */
+details {
+    padding: 1rem;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #3a7f7a;
+    margin-bottom: 0.5rem;
+}
+
+summary:hover {
+    color: #1f3d3a;
+}
+
+details p {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* ---------- Pricing Link ---------- */
+details a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background: #1f3d3a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+details a:hover {
+    background: #3a7f7a;
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    figure img {
+        height: 180px;
+    }
+}
