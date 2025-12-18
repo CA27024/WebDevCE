@@ -141,3 +141,188 @@ details a:hover {
         height: 180px;
     }
 }
+
+/* ---------- Home / Hero Section ---------- */
+main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Subheading */
+main h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #3a7f7a;
+    margin-bottom: 1rem;
+}
+
+/* Explore Button Heading */
+.explore {
+    margin-top: 1rem;
+}
+
+/* Explore Link Styled as Button */
+.explore a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #1f3d3a;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.explore a:hover {
+    background: #3a7f7a;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 600px) {
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    .explore a {
+        font-size: 1.4rem;
+        padding: 0.75rem 2rem;
+    }
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+    position: relative;
+    min-height: 100vh; /* full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* Hero Background Image */
+    background-image: url('images/Airplane.webp'); /* replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Dark overlay to make text readable */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(31, 61, 58, 0.5);
+    z-index: 1;
+}
+
+/* Hero content above the overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+/* Subheading */
+.hero-content h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #a8dadc;
+    margin-bottom: 1rem;
+}
+
+/* Explore button */
+.hero-content .explore a {
+    display: inline-block;
+    padding: 0.9rem 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #1f3d3a;
+    border-radius: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.hero-content .explore a:hover {
+    background: #3a7f7a;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-content .explore a {
+        font-size: 1.4rem;
+        padding: 0.75rem 2rem;
+    }
+}
+
+/* ---------- Pricing Page ---------- */
+main h1, main h2 {
+    text-align: center;
+    color: #1f3d3a;
+    margin-bottom: 1rem;
+}
+
+main h2 {
+    font-weight: 400;
+    color: #3a7f7a;
+    margin-bottom: 2.5rem;
+}
+
+/* ---------- Pricing Table ---------- */
+.pricing {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    border-collapse: collapse;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.pricing th, .pricing td {
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+
+.pricing th {
+    background-color: #1f3d3a;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.pricing td {
+    border-top: 1px solid #e9f5f5;
+    font-size: 1rem;
+    color: #2f3e46;
+}
+
+.pricing tr:hover {
+    background-color: #e9f5f5;
+    transition: background-color 0.3s ease;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .pricing th, .pricing td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
