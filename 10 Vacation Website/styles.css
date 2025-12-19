@@ -59,12 +59,15 @@ h1 {
 /* ---------- Gallery Layout ---------- */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
 }
 
 /* ---------- Figure Cards ---------- */
 figure {
+     width: 100%;          /* fill the grid column */
+    max-width: 350px;     /* optional, control max size */
+    box-sizing: border-box;
     background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
@@ -324,5 +327,77 @@ main h2 {
     .pricing th, .pricing td {
         padding: 0.75rem 0.5rem;
         font-size: 0.9rem;
+    }
+}
+/* ---------- Book Now Submit Button ---------- */
+input[type="submit"] {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+
+    padding: 0.75rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+
+    color: #ffffff;
+    background: linear-gradient(135deg, #1f3d3a, #3a7f7a);
+    border-radius: 40px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #3a7f7a, #1f3d3a);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+input[type="submit"]:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Accessible focus */
+input[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(168, 218, 220, 0.6);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+    input[type="submit"] {
+        font-size: 0.95rem;
+        padding: 0.65rem 1.8rem;
+    }
+}
+/* ---------- Video Container ---------- */
+.video-container {
+    max-width: 600px;           /* match your text/content width */
+    margin: 2rem auto;          /* center on page */
+    border-radius: 20px;        /* like your cards/buttons */
+    overflow: hidden;           /* for rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* match figure shadows */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Responsive iframe ---------- */
+.video-container iframe {
+    width: 100%;
+    height: 315px;               /* fixed height, can adjust */
+    display: block;
+}
+@media (max-width: 600px) {
+    .video-container iframe {
+        height: 200px;           /* smaller on mobile */
     }
 }
